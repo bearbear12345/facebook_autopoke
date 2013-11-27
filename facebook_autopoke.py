@@ -25,6 +25,7 @@ while True:
 			browser._factory.is_html = True
 			if result:
 				browser.follow_link(text_regex="Poke back",nr=0)
+                                print("Poke!")
                                 if exp > 31:
                                         exp -= 30
                 if exp < 180:
