@@ -14,8 +14,8 @@ browser.set_handle_robots(False)
 browser.open("http://m.facebook.com/pokes")
 browser._factory.is_html = True
 browser.select_form(nr=0)
-browser.form['email'] = arg[0]
-browser.form['pass'] = arg[1]
+browser.form['email'] = arg[1]
+browser.form['pass'] = arg[2]
 browser.submit()
 browser._factory.is_html = True
 while True:
