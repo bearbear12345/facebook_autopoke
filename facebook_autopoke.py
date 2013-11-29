@@ -2,10 +2,10 @@ import mechanize
 import time
 import os
 import sys
+from random import choice
 
 arg = sys.argv
-exp = 1
-#S = False
+exp = [1,1,1,1,1,1,1,1,5,10]
 
 browser = mechanize.Browser()
 browser.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:20.0) Gecko/20100101 Firefox/20.0')]
@@ -28,15 +28,7 @@ while True:
 			if result:
 				browser.follow_link(text_regex="Poke back",nr=0)
                                 print("Poke!")
-#                                if exp > 31:
-#                                        exp -= 30
-#                                         S = True
-#                if S == False:
-#                        if exp < 180:
-#                                exp += 1
-#                else:
-#                        S = False
-                time.sleep(exp)
+                time.sleep(choice(exp))
 	except:
 		print "There was some sort of error :("
                 break
